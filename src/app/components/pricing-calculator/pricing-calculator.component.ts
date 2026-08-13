@@ -12,14 +12,14 @@ import { EduPulseStateService } from '../../services/edupulse-state.service';
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-12 space-y-2">
-          <span class="text-xs font-extrabold uppercase tracking-widest text-ep-green bg-ep-lightGreen px-3 py-1 rounded-full border border-ep-green/30">
-            Tarification Établissement
+          <span class="text-xs font-extrabold uppercase tracking-widest text-ep-green bg-ep-lightGreen px-3 py-1 rounded-full">
+            Pour les établissements
           </span>
           <h2 class="text-3xl sm:text-4xl font-black text-ep-navy font-heading">
-            Tarification B2B Adaptée à Votre Établissement
+            Une offre claire, selon la taille de votre école
           </h2>
           <p class="text-slate-600 text-sm sm:text-base">
-            Profitez de 2 mois offerts sur l'abonnement annuel.
+            2 mois offerts sur l'abonnement annuel. Sans engagement surprise.
           </p>
         </div>
 

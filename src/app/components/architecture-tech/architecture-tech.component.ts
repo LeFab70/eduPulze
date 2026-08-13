@@ -10,14 +10,14 @@ import { CommonModule } from '@angular/common';
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-12 space-y-2">
-          <span class="text-xs font-extrabold uppercase tracking-widest text-ep-navy bg-slate-100 px-3 py-1 rounded-full border border-slate-300">
-            Ingénierie & Sécurité Enterprise
+          <span class="text-xs font-extrabold uppercase tracking-widest text-ep-navy bg-slate-100 px-3 py-1 rounded-full">
+            Fiable, même quand le réseau lâche
           </span>
           <h2 class="text-3xl sm:text-4xl font-black text-ep-navy font-heading">
-            Architecture Technique EduPulse
+            Une plateforme solide, pensée pour l'Afrique
           </h2>
           <p class="text-slate-600 text-sm sm:text-base">
-            Conçue pour supporter des millions de requêtes et garantir l'isolation des données scolaires.
+            Données isolées par école, paiements sécurisés, et fonctionnement hors ligne pour les enseignants.
           </p>
         </div>
 

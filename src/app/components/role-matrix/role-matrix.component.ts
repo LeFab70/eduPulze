@@ -12,14 +12,14 @@ import { EduPulseStateService } from '../../services/edupulse-state.service';
         
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-12 space-y-2">
-          <span class="text-xs font-extrabold uppercase tracking-widest text-ep-navy bg-white px-3 py-1 rounded-full border border-slate-300">
-            Sécurité RBAC Cloisonnée
+          <span class="text-xs font-extrabold uppercase tracking-widest text-ep-green bg-ep-lightGreen px-3 py-1 rounded-full">
+            Un espace pour chacun
           </span>
           <h2 class="text-3xl sm:text-4xl font-black text-ep-navy font-heading">
-            Matrice des Rôles & Permissions
+            Parents, profs, direction, caisse
           </h2>
           <p class="text-slate-600 text-sm sm:text-base">
-            6 profils d'accès sécurisés par Token JWT pour tous les acteurs de l'école.
+            Chaque acteur de l'école a son application, ses droits, et uniquement ce dont il a besoin.
           </p>
         </div>
 

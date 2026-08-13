@@ -6,11 +6,13 @@ import { FeaturesGridComponent } from './components/features-grid/features-grid.
 import { PaymentSectionComponent } from './components/payment-section/payment-section.component';
 import { RoleMatrixComponent } from './components/role-matrix/role-matrix.component';
 import { ModulesExplorerComponent } from './components/modules-explorer/modules-explorer.component';
-import { TeacherSimulatorComponent } from './components/simulators/teacher-simulator/teacher-simulator.component';
-import { BulletinGeneratorComponent } from './components/simulators/bulletin-generator/bulletin-generator.component';
 import { PricingCalculatorComponent } from './components/pricing-calculator/pricing-calculator.component';
 import { ArchitectureTechComponent } from './components/architecture-tech/architecture-tech.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RealitiesComponent } from './components/realities/realities.component';
+import { StatsBarComponent } from './components/stats-bar/stats-bar.component';
+import { DemoGalleryComponent } from './components/demo-gallery/demo-gallery.component';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
 
 @Component({
   selector: 'app-root',
@@ -19,15 +21,17 @@ import { FooterComponent } from './components/footer/footer.component';
     CommonModule,
     HeaderComponent,
     HeroPosterComponent,
+    StatsBarComponent,
     FeaturesGridComponent,
     PaymentSectionComponent,
+    RealitiesComponent,
+    DemoGalleryComponent,
     RoleMatrixComponent,
     ModulesExplorerComponent,
-    TeacherSimulatorComponent,
-    BulletinGeneratorComponent,
     PricingCalculatorComponent,
     ArchitectureTechComponent,
-    FooterComponent
+    FooterComponent,
+    ChatbotComponent,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',

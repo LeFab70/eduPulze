@@ -1,56 +1,20 @@
-<div class="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
-  
-  <!-- Sticky Header Nav -->
+<div class="min-h-screen bg-white text-slate-800 flex flex-col font-sans">
+
   <app-header></app-header>
 
-  <!-- Main Content Flow -->
   <main class="flex-grow">
-    
-    <!-- Hero Section (Poster Replica with Interactive Phone Mockup) -->
     <app-hero-poster></app-hero-poster>
-
-    <!-- 4 Impact Pillars & "Conçu pour nos réalités" -->
+    <app-stats-bar></app-stats-bar>
     <app-features-grid></app-features-grid>
-
-    <!-- Payment Section & Mobile Money Simulator -->
     <app-payment-section></app-payment-section>
-
-    <!-- Interactive Simulators (Teacher Offline/IA & Bulletin MINESEC Generator) -->
-    <section id="simulators" class="py-16 bg-slate-900/50 border-t border-slate-800">
-      <div class="max-w-7xl mx-auto px-4 lg:px-8 space-y-12">
-        <div class="text-center max-w-3xl mx-auto space-y-3">
-          <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-500/30">
-            Démonstrations Interactives en Direct
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">
-            Tester les Modules Différenciants
-          </h2>
-          <p class="text-slate-400 text-sm sm:text-base">
-            Expérimentez le mode hors-ligne enseignant, les suggestions d'appréciations par IA et la génération de bulletins homologués.
-          </p>
-        </div>
-
-        <app-teacher-simulator></app-teacher-simulator>
-        
-        <app-bulletin-generator></app-bulletin-generator>
-      </div>
-    </section>
-
-    <!-- Matrice des 6 Rôles RBAC -->
+    <app-realities></app-realities>
+    <app-demo-gallery></app-demo-gallery>
     <app-role-matrix></app-role-matrix>
-
-    <!-- Explorateur des 13 Modules ERP -->
     <app-modules-explorer></app-modules-explorer>
-
-    <!-- Calculateur de Tarifs SaaS B2B FCFA -->
     <app-pricing-calculator></app-pricing-calculator>
-
-    <!-- Architecture Technique (Spring Boot, PostgreSQL, Flutter, Angular) -->
     <app-architecture-tech></app-architecture-tech>
-
   </main>
 
-  <!-- Footer -->
   <app-footer></app-footer>
-
+  <app-chatbot></app-chatbot>
 </div>

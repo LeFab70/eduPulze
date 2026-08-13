@@ -7,14 +7,14 @@ import { EduPulseStateService } from '../../../services/edupulse-state.service';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div id="bulletin-sim" class="glass-panel p-6 sm:p-8 rounded-3xl border border-blue-500/30 space-y-6">
+    <div id="bulletin-sim" class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl space-y-6">
       
-      <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4">
+      <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4">
         <div>
-          <div class="inline-block px-2.5 py-0.5 rounded bg-blue-950 text-blue-400 text-[10px] font-extrabold uppercase mb-1">
-            GÉNÉRATION PDF HOMOLOGUÉE
+          <div class="inline-block px-2.5 py-0.5 rounded bg-ep-lightGreen text-ep-green text-[10px] font-extrabold uppercase mb-1">
+            Bulletin officiel
           </div>
-          <h3 class="text-xl font-bold text-white font-heading">Bulletins Officiels MINESEC / MINEDUB</h3>
+          <h3 class="text-xl font-bold text-ep-navy font-heading">Bulletins homologués MINESEC / MINEDUB</h3>
         </div>
 
         <div class="flex items-center gap-3">
@@ -26,13 +26,13 @@ import { EduPulseStateService } from '../../../services/edupulse-state.service';
       </div>
 
       <!-- School Name Editor Customizer -->
-      <div class="flex flex-wrap items-center gap-3 p-3 rounded-xl bg-slate-950 border border-slate-800">
-        <span class="text-xs font-bold text-slate-400">Nom de votre établissement :</span>
+      <div class="flex flex-wrap items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
+        <span class="text-xs font-bold text-slate-500">Nom de votre établissement :</span>
         <input 
           type="text" 
           [value]="schoolName()" 
           (input)="schoolName.set($any($event.target).value)"
-          class="flex-1 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-white text-xs font-bold focus:border-blue-400 focus:outline-none"
+          class="flex-1 px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-ep-navy text-xs font-bold focus:border-ep-green focus:outline-none"
         />
       </div>
 
@@ -85,9 +85,11 @@ import { EduPulseStateService } from '../../../services/edupulse-state.service';
               <tr class="bg-slate-900 text-white font-bold uppercase text-[10px] text-center">
                 <th class="p-2 border border-slate-700">Matières & Enseignants</th>
                 <th class="p-2 border border-slate-700">Note /20</th>
+                <th class="p-2 border border-slate-700">Min</th>
+                <th class="p-2 border border-slate-700">Max</th>
                 <th class="p-2 border border-slate-700">Coeff</th>
                 <th class="p-2 border border-slate-700">Total</th>
-                <th class="p-2 border border-slate-700">Appréciations & Remarques</th>
+                <th class="p-2 border border-slate-700">Appréciations</th>
               </tr>
             </thead>
             <tbody>
@@ -100,6 +102,8 @@ import { EduPulseStateService } from '../../../services/edupulse-state.service';
                   <td class="p-2 text-center font-black border border-slate-300 text-sm" [class.text-emerald-700]="g.score >= 14">
                     {{ g.score }}
                   </td>
+                  <td class="p-2 text-center border border-slate-300">{{ g.classMin }}</td>
+                  <td class="p-2 text-center border border-slate-300">{{ g.classMax }}</td>
                   <td class="p-2 text-center font-bold border border-slate-300">{{ g.coefficient }}</td>
                   <td class="p-2 text-center font-mono font-bold border border-slate-300">{{ g.score * g.coefficient }}</td>
                   <td class="p-2 text-[10px] italic border border-slate-300">
@@ -117,11 +121,19 @@ import { EduPulseStateService } from '../../../services/edupulse-state.service';
           <div class="p-3 rounded-lg border border-slate-400 space-y-1">
             <div class="font-bold border-b border-slate-300 pb-1">BILAN SYNTHÉTIQUE</div>
             <div class="flex justify-between">
-              <span>Moyenne Générale :</span>
+              <span>1ʳᵉ moyenne (classe) :</span>
+              <strong>16,80 / 20</strong>
+            </div>
+            <div class="flex justify-between">
+              <span>Dernière moyenne :</span>
+              <strong>8,25 / 20</strong>
+            </div>
+            <div class="flex justify-between">
+              <span>Moyenne générale :</span>
               <strong class="text-base text-emerald-800 font-black">{{ state.activeChild().generalAverage }} / 20</strong>
             </div>
             <div class="flex justify-between">
-              <span>Rangement :</span>
+              <span>Rang :</span>
               <strong>{{ state.activeChild().rank }}</strong>
             </div>
             <div class="flex justify-between">

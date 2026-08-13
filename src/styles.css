@@ -1,33 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --ep-navy: #0B2545;
+  --ep-green: #00A651;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #FFFFFF;
   color: #1E293B;
   font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Poster Visual Mobile Frame Shadow */
+::selection {
+  background: rgba(0, 166, 81, 0.22);
+  color: #0B2545;
+}
+
+/* ——— Cinematic atmosphere ——— */
+.film-grain {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.045;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.hero-mesh {
+  background:
+    radial-gradient(900px 420px at 8% -10%, rgba(0, 166, 81, 0.08), transparent 60%),
+    radial-gradient(700px 380px at 92% 8%, rgba(11, 37, 69, 0.06), transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #f7faf8 48%, #ffffff 100%);
+}
+
+.couple-grade {
+  filter: contrast(1.06) saturate(0.9) brightness(0.98);
+}
+
+.couple-veil {
+  background: linear-gradient(180deg, rgba(11, 37, 69, 0) 55%, rgba(11, 37, 69, 0.22) 100%);
+}
+
+/* ——— Phone mockup ——— */
 .phone-frame-light {
   background: #FFFFFF;
   border: 10px solid #0F172A;
   border-radius: 44px;
-  box-shadow: 0 25px 60px -15px rgba(11, 37, 69, 0.3), 0 10px 25px -5px rgba(0, 166, 81, 0.2);
+  box-shadow: 0 40px 80px -20px rgba(11, 37, 69, 0.45), 0 12px 28px -8px rgba(0, 166, 81, 0.18);
   overflow: hidden;
   position: relative;
-  max-width: 350px;
+  max-width: 320px;
   margin: 0 auto;
 }
 
 .phone-notch-light {
-  width: 130px;
+  width: 118px;
   height: 22px;
   background: #0F172A;
   position: absolute;
@@ -39,14 +79,75 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 50;
 }
 
-/* Badge Top Right Lock Shield */
+.phone-stage {
+  animation: floaty 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+.phone-stage:hover {
+  animation-play-state: paused;
+}
+
+/* ——— Reveal on scroll ——— */
+.ep-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ep-reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+.ep-reveal-delay-1 { transition-delay: 0.08s; }
+.ep-reveal-delay-2 { transition-delay: 0.16s; }
+.ep-reveal-delay-3 { transition-delay: 0.24s; }
+.ep-reveal-delay-4 { transition-delay: 0.32s; }
+
+.module-card {
+  animation: riseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.module-card:nth-child(2) { animation-delay: 0.05s; }
+.module-card:nth-child(3) { animation-delay: 0.1s; }
+.module-card:nth-child(4) { animation-delay: 0.15s; }
+.module-card:nth-child(5) { animation-delay: 0.2s; }
+.module-card:nth-child(6) { animation-delay: 0.25s; }
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+
+a, button {
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ——— Security badge ——— */
 .shield-badge-poster {
   background: #0B2545;
   color: #FFFFFF;
-  border-radius: 0 0 1rem 1rem;
-  padding: 0.75rem 1.25rem;
+  border-radius: 14px;
+  padding: 0.7rem 1.05rem;
   text-align: center;
-  box-shadow: 0 10px 20px -5px rgba(11, 37, 69, 0.4);
+  box-shadow: 0 14px 28px -12px rgba(11, 37, 69, 0.55);
+}
+
+/* ——— Dotted column rules ——— */
+.reality-col {
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .reality-col:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 0;
+    bottom: 8px;
+    border-right: 1.5px dotted rgba(255, 255, 255, 0.28);
+  }
 }
 
 /* Print Rules */
