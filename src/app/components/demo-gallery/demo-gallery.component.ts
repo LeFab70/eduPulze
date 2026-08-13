@@ -13,13 +13,13 @@ import { BulletinGeneratorComponent } from '../simulators/bulletin-generator/bul
 
         <div class="text-center max-w-3xl mx-auto space-y-3" epReveal>
           <span class="text-xs font-bold uppercase tracking-widest text-ep-green bg-ep-lightGreen px-3 py-1 rounded-full">L'application en images</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-ep-navy font-heading">Trois écrans, toute l'école</h2>
-          <p class="text-slate-500">Parent, enseignant, caisse — ce que vous voyez sur le téléphone, sans simulation.</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-ep-navy font-heading">Toute l'école, sur le téléphone</h2>
+          <p class="text-slate-500">Parent, enseignant, caisse, direction — notes, absences, conseil de classe et alertes. Sans simulation.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10 items-start">
           <!-- Parent phone -->
-          <div class="space-y-4" epReveal="scale" [epDelay]="0">
+          <div class="space-y-4 phone-stage" epReveal="scale" [epDelay]="0">
             <div class="phone-frame-light">
               <div class="phone-notch-light"></div>
               <div class="pt-7 px-4 pb-2 bg-white">
@@ -78,7 +78,7 @@ import { BulletinGeneratorComponent } from '../simulators/bulletin-generator/bul
           </div>
 
           <!-- Teacher phone -->
-          <div class="space-y-4" epReveal="scale" [epDelay]="140">
+          <div class="space-y-4 phone-stage" style="animation-delay: 0.4s" epReveal="scale" [epDelay]="80">
             <div class="phone-frame-light">
               <div class="phone-notch-light"></div>
               <div class="pt-7 px-4 pb-3 bg-ep-navy text-white">
@@ -105,29 +105,215 @@ import { BulletinGeneratorComponent } from '../simulators/bulletin-generator/bul
           </div>
 
           <!-- Payment phone -->
-          <div class="space-y-4" epReveal="scale" [epDelay]="280">
+          <div class="space-y-4 phone-stage" style="animation-delay: 0.8s" epReveal="scale" [epDelay]="160">
             <div class="phone-frame-light">
               <div class="phone-notch-light"></div>
-              <div class="pt-7 px-4 pb-3 bg-white">
+              <div class="pt-7 px-4 pb-2 bg-white">
                 <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Scolarité</div>
                 <div class="font-extrabold text-sm text-ep-navy">Andy Kouonang · 5ᵉ A</div>
               </div>
-              <div class="px-3.5 pb-4 space-y-3 min-h-[340px] bg-white">
-                <div class="p-3 rounded-xl bg-slate-50">
+              <div class="px-3.5 pb-0 space-y-2.5 min-h-[340px] bg-white flex flex-col overflow-hidden">
+                <div class="p-2.5 rounded-xl bg-slate-50">
                   <div class="text-[10px] text-slate-500 font-bold uppercase">Tranche 2</div>
-                  <div class="text-2xl font-black text-ep-navy font-heading">50 000 <span class="text-sm">FCFA</span></div>
+                  <div class="text-xl font-black text-ep-navy font-heading">50 000 <span class="text-sm">FCFA</span></div>
                 </div>
                 <div class="grid grid-cols-2 gap-2">
                   <div class="p-2 rounded-lg bg-ep-momoYellow text-[10px] font-black text-center">MTN MoMo</div>
                   <div class="p-2 rounded-lg bg-ep-orangeMoney text-white text-[10px] font-black text-center">Orange</div>
                 </div>
-                <div class="p-3 rounded-xl bg-ep-lightGreen border border-ep-green/20 text-center">
-                  <div class="text-ep-green font-black text-sm">Paiement confirmé</div>
-                  <div class="text-[10px] text-slate-600 mt-1">Reçu envoyé au parent</div>
+                <div class="p-2.5 rounded-xl bg-ep-lightGreen border border-ep-green/20 text-center">
+                  <div class="text-ep-green font-black text-xs">Paiement confirmé ✓</div>
+                  <div class="text-[9px] text-slate-600 mt-0.5">Reçu généré — voir ci-dessous</div>
+                </div>
+
+                <div class="mt-auto relative -mx-1.5 pt-1">
+                  <div class="bg-[#fffdf8] border border-amber-200 rounded-t-xl px-3 pt-3 pb-8 shadow-md font-mono text-slate-800">
+                    <div class="text-center border-b border-dashed border-slate-300 pb-2 mb-2">
+                      <div class="text-[8px] uppercase tracking-widest text-slate-500">Collège Bilingue de l'Excellence</div>
+                      <div class="text-[11px] font-black font-heading text-ep-navy">REÇU DE CAISSE</div>
+                      <div class="text-[9px] font-bold text-slate-600">N° REC-EP-884211</div>
+                    </div>
+                    <div class="text-[9px] space-y-0.5 mb-2">
+                      <div class="flex justify-between"><span>Élève</span><strong>Andy Kouonang</strong></div>
+                      <div class="flex justify-between"><span>Mode</span><strong>MTN MoMo</strong></div>
+                      <div class="flex justify-between"><span>Tranche 2</span><strong>50 000 F</strong></div>
+                    </div>
+                    <div class="text-[10px] space-y-0.5 border-t border-dashed border-slate-300 pt-2">
+                      <div class="flex justify-between font-black text-ep-green">
+                        <span>Total payé</span><span>150 000 F</span>
+                      </div>
+                      <div class="flex justify-between font-black text-ep-navy">
+                        <span>Reste</span><span>50 000 F</span>
+                      </div>
+                    </div>
+                    <p class="text-[8px] text-center text-slate-400 mt-2">EduPulse · reçu numérique</p>
+                  </div>
+                  <div class="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white via-white/90 to-transparent pointer-events-none"></div>
                 </div>
               </div>
             </div>
             <p class="text-center text-sm font-bold text-ep-navy font-heading">Paiement Mobile Money</p>
+          </div>
+
+          <!-- Conseil de classe -->
+          <div class="space-y-4 phone-stage" style="animation-delay: 1.2s" epReveal="scale" [epDelay]="240">
+            <div class="phone-frame-light">
+              <div class="phone-notch-light"></div>
+              <div class="pt-7 px-4 pb-3 bg-ep-navy text-white">
+                <div class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">Conseil de classe</div>
+                <div class="font-extrabold text-sm mt-0.5">Statistiques 5ᵉ A</div>
+                <div class="text-[10px] text-slate-300">Trimestre 1 · 32 élèves</div>
+              </div>
+              <div class="px-3.5 py-3 space-y-2.5 min-h-[340px] bg-slate-50">
+                <div class="grid grid-cols-2 gap-2">
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-100">
+                    <div class="text-[8px] font-bold text-slate-500 uppercase">Moy. classe</div>
+                    <div class="text-lg font-black text-ep-green font-heading">12,40</div>
+                  </div>
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-100">
+                    <div class="text-[8px] font-bold text-slate-500 uppercase">1ʳᵉ / dernière</div>
+                    <div class="text-sm font-black text-ep-navy font-heading">16,80 · 8,25</div>
+                  </div>
+                </div>
+                <div class="p-2.5 bg-white rounded-xl border border-slate-100 space-y-1.5">
+                  <div class="text-[9px] font-extrabold text-ep-navy uppercase">Mentions</div>
+                  <div class="flex justify-between text-[10px]"><span>Tableau d'honneur</span><strong class="text-ep-green">8</strong></div>
+                  <div class="flex justify-between text-[10px]"><span>Encouragements</span><strong>11</strong></div>
+                  <div class="flex justify-between text-[10px]"><span>Avertissement</span><strong class="text-amber-600">5</strong></div>
+                  <div class="flex justify-between text-[10px]"><span>Blâme</span><strong class="text-rose-600">2</strong></div>
+                </div>
+                <div class="p-2.5 bg-amber-50 rounded-xl border border-amber-100">
+                  <div class="text-[9px] font-extrabold text-amber-800 uppercase mb-1">À suivre</div>
+                  <div class="text-[10px] text-slate-700 font-semibold">Mbi Theresse · 8,90 — soutien Math</div>
+                  <div class="text-[10px] text-slate-700 font-semibold">Brigitte W. · absences élevées</div>
+                </div>
+                <div class="h-16 rounded-xl bg-white border border-slate-100 px-2 py-2 flex items-end gap-1">
+                  <div class="flex-1 bg-ep-green/80 rounded-t" style="height:70%"></div>
+                  <div class="flex-1 bg-ep-green/60 rounded-t" style="height:55%"></div>
+                  <div class="flex-1 bg-ep-green rounded-t" style="height:85%"></div>
+                  <div class="flex-1 bg-ep-green/70 rounded-t" style="height:62%"></div>
+                  <div class="flex-1 bg-amber-400 rounded-t" style="height:40%"></div>
+                  <div class="flex-1 bg-rose-400 rounded-t" style="height:28%"></div>
+                </div>
+              </div>
+            </div>
+            <p class="text-center text-sm font-bold text-ep-navy font-heading">Conseil de classe</p>
+          </div>
+
+          <!-- Bilan absences -->
+          <div class="space-y-4 phone-stage" style="animation-delay: 0.2s" epReveal="scale" [epDelay]="320">
+            <div class="phone-frame-light">
+              <div class="phone-notch-light"></div>
+              <div class="pt-7 px-4 pb-3 bg-white border-b border-slate-100">
+                <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Vie scolaire</div>
+                <div class="font-extrabold text-sm text-ep-navy">Bilan des absences</div>
+                <div class="text-[10px] text-slate-500">Andy Kouonang · Trimestre 1</div>
+              </div>
+              <div class="px-3.5 py-3 space-y-2.5 min-h-[340px] bg-slate-50">
+                <div class="grid grid-cols-3 gap-1.5">
+                  <div class="p-2 bg-white rounded-xl text-center border border-slate-100">
+                    <div class="text-[8px] font-bold text-slate-500 uppercase">Total</div>
+                    <div class="text-base font-black text-ep-navy font-heading">6 h</div>
+                  </div>
+                  <div class="p-2 bg-white rounded-xl text-center border border-slate-100">
+                    <div class="text-[8px] font-bold text-slate-500 uppercase">Justifiées</div>
+                    <div class="text-base font-black text-ep-green font-heading">4 h</div>
+                  </div>
+                  <div class="p-2 bg-rose-50 rounded-xl text-center border border-rose-100">
+                    <div class="text-[8px] font-bold text-rose-600 uppercase">Non just.</div>
+                    <div class="text-base font-black text-rose-600 font-heading">2 h</div>
+                  </div>
+                </div>
+                @for (a of absences; track a.date) {
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-100 flex items-center justify-between gap-2">
+                    <div>
+                      <div class="text-[11px] font-extrabold text-ep-navy">{{ a.date }}</div>
+                      <div class="text-[9px] text-slate-500">{{ a.matiere }} · {{ a.duree }}</div>
+                    </div>
+                    <span class="text-[9px] font-black uppercase px-2 py-0.5 rounded-full"
+                      [class.bg-ep-lightGreen]="a.ok"
+                      [class.text-ep-green]="a.ok"
+                      [class.bg-rose-100]="!a.ok"
+                      [class.text-rose-700]="!a.ok">
+                      {{ a.ok ? 'Justifiée' : 'Non just.' }}
+                    </span>
+                  </div>
+                }
+                <div class="p-2.5 rounded-xl bg-ep-navy text-white text-[10px] font-bold text-center">
+                  Alerte parent si &gt; 8 h non justifiées
+                </div>
+              </div>
+            </div>
+            <p class="text-center text-sm font-bold text-ep-navy font-heading">Bilan des absences</p>
+          </div>
+
+          <!-- Emploi du temps -->
+          <div class="space-y-4 phone-stage" style="animation-delay: 0.6s" epReveal="scale" [epDelay]="400">
+            <div class="phone-frame-light">
+              <div class="phone-notch-light"></div>
+              <div class="pt-7 px-4 pb-3 bg-ep-green text-white">
+                <div class="text-[10px] font-bold uppercase tracking-wider text-white/80">Emploi du temps</div>
+                <div class="font-extrabold text-sm mt-0.5">Jeudi · 5ᵉ A</div>
+                <div class="text-[10px] text-white/80">13 août 2026</div>
+              </div>
+              <div class="px-3.5 py-3 space-y-2 min-h-[340px] bg-slate-50">
+                @for (slot of timetable; track slot.heure) {
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-100 flex gap-2.5 items-start"
+                    [class.ring-2]="slot.now"
+                    [class.ring-ep-green]="slot.now">
+                    <div class="text-[10px] font-black text-ep-navy w-11 shrink-0 pt-0.5">{{ slot.heure }}</div>
+                    <div class="min-w-0">
+                      <div class="text-[11px] font-extrabold text-ep-navy">{{ slot.matiere }}</div>
+                      <div class="text-[9px] text-slate-500">{{ slot.salle }} · {{ slot.prof }}</div>
+                    </div>
+                    @if (slot.now) {
+                      <span class="ml-auto text-[8px] font-black uppercase text-ep-green bg-ep-lightGreen px-1.5 py-0.5 rounded">Maintenant</span>
+                    }
+                  </div>
+                }
+              </div>
+            </div>
+            <p class="text-center text-sm font-bold text-ep-navy font-heading">Emploi du temps</p>
+          </div>
+
+          <!-- Alertes / direction -->
+          <div class="space-y-4 phone-stage" style="animation-delay: 1s" epReveal="scale" [epDelay]="480">
+            <div class="phone-frame-light">
+              <div class="phone-notch-light"></div>
+              <div class="pt-7 px-4 pb-3 bg-ep-navy text-white">
+                <div class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">Direction</div>
+                <div class="font-extrabold text-sm mt-0.5">Alertes & recouvrement</div>
+                <div class="text-[10px] text-slate-300">Tableau de bord du jour</div>
+              </div>
+              <div class="px-3.5 py-3 space-y-2.5 min-h-[340px] bg-slate-50">
+                <div class="grid grid-cols-2 gap-2">
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-100">
+                    <div class="text-[8px] font-bold text-slate-500 uppercase">Recouvré</div>
+                    <div class="text-base font-black text-ep-green font-heading">88 %</div>
+                  </div>
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-100">
+                    <div class="text-[8px] font-bold text-slate-500 uppercase">Impayés</div>
+                    <div class="text-base font-black text-amber-600 font-heading">42</div>
+                  </div>
+                </div>
+                @for (al of alerts; track al.title) {
+                  <div class="p-2.5 bg-white rounded-xl border border-slate-100 flex gap-2">
+                    <span class="w-2 h-2 rounded-full mt-1.5 shrink-0"
+                      [class.bg-ep-green]="al.level === 'ok'"
+                      [class.bg-amber-500]="al.level === 'warn'"
+                      [class.bg-rose-500]="al.level === 'alert'"></span>
+                    <div>
+                      <div class="text-[11px] font-extrabold text-ep-navy">{{ al.title }}</div>
+                      <div class="text-[9px] text-slate-500">{{ al.detail }}</div>
+                    </div>
+                  </div>
+                }
+                <div class="p-2.5 rounded-xl bg-[#25D366] text-white text-[10px] font-extrabold text-center">
+                  12 SMS de relance envoyés aujourd'hui
+                </div>
+              </div>
+            </div>
+            <p class="text-center text-sm font-bold text-ep-navy font-heading">Alertes direction</p>
           </div>
         </div>
 
@@ -242,5 +428,27 @@ export class DemoGalleryComponent {
     { name: 'Gisele Ymele', mat: '24EP-102', note: 18 },
     { name: 'Mbi Theresse', mat: '24EP-088', note: 14 },
     { name: 'Regina F.', mat: '24EP-084', note: 16 },
+  ];
+
+  absences = [
+    { date: '12 août', matiere: 'Mathématiques', duree: '2 h', ok: true },
+    { date: '05 août', matiere: 'Français', duree: '1 h', ok: true },
+    { date: '28 juil.', matiere: 'EPS', duree: '2 h', ok: false },
+    { date: '15 juil.', matiere: 'SVT', duree: '1 h', ok: true },
+  ];
+
+  timetable = [
+    { heure: '07:30', matiere: 'Mathématiques', salle: 'Salle 12', prof: 'M. Ndongo', now: false },
+    { heure: '09:00', matiere: 'Français', salle: 'Salle 08', prof: 'Mme Kamga', now: true },
+    { heure: '10:30', matiere: 'Physique', salle: 'Labo 2', prof: 'Mme Tchakounte', now: false },
+    { heure: '12:00', matiere: 'Pause déjeuner', salle: 'Réfectoire', prof: '—', now: false },
+    { heure: '13:30', matiere: 'Anglais', salle: 'Salle 05', prof: 'Mr. John B.', now: false },
+  ];
+
+  alerts = [
+    { level: 'alert' as const, title: '3 absences non justifiées', detail: '5ᵉ A · alerte parents envoyée' },
+    { level: 'warn' as const, title: 'Retard de scolarité', detail: '42 familles · relance SMS' },
+    { level: 'ok' as const, title: 'Bulletins T1 prêts', detail: '32 / 32 générés · PDF OK' },
+    { level: 'warn' as const, title: 'Conseil demain 14 h', detail: '5ᵉ A · salle des profs' },
   ];
 }
