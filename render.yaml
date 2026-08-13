@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: edupulse
+    runtime: static
+    repo: https://github.com/LeFab70/eduPulze.git
+    branch: main
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist/edupulse/browser
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
