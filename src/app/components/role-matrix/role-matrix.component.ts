@@ -7,19 +7,19 @@ import { EduPulseStateService } from '../../services/edupulse-state.service';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section class="py-16 bg-slate-900/40 border-t border-slate-800">
-      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+    <section class="py-16 bg-ep-lightBg border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <span class="text-xs font-bold uppercase tracking-widest text-blue-400 bg-blue-950/60 px-3 py-1 rounded-full border border-blue-500/30">
-            Sécurité & Accessibilité Découpée
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-2">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-ep-navy bg-white px-3 py-1 rounded-full border border-slate-300">
+            Sécurité RBAC Cloisonnée
           </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">
-            Matrice des Rôles & Permissions (RBAC)
+          <h2 class="text-3xl sm:text-4xl font-black text-ep-navy font-heading">
+            Matrice des Rôles & Permissions
           </h2>
-          <p class="text-slate-400 text-sm sm:text-base">
-            Chaque acteur de l'écosystème scolaire dispose d'un espace strictement cloisonné et sécurisé par Token JWT.
+          <p class="text-slate-600 text-sm sm:text-base">
+            6 profils d'accès sécurisés par Token JWT pour tous les acteurs de l'école.
           </p>
         </div>
 
@@ -29,35 +29,35 @@ import { EduPulseStateService } from '../../services/edupulse-state.service';
             <button 
               (click)="state.activeRole.set(role.code)"
               [class]="state.activeRole() === role.code 
-                ? 'bg-blue-600 text-white font-bold border-blue-400 shadow-lg shadow-blue-600/30 scale-105' 
-                : 'bg-slate-900 text-slate-400 hover:text-white border-slate-800'"
-              class="px-4 py-2.5 rounded-xl border text-xs sm:text-sm font-semibold transition-all">
+                ? 'bg-ep-navy text-white font-bold shadow-md scale-105' 
+                : 'bg-white text-slate-700 hover:bg-slate-100 border-slate-300'"
+              class="px-4 py-2.5 rounded-xl border text-xs sm:text-sm font-bold transition-all">
               {{ role.name }}
             </button>
           }
         </div>
 
-        <!-- Role Details & Matrix View -->
+        <!-- Role Card -->
         @for (role of state.rolesList(); track role.code) {
           @if (state.activeRole() === role.code) {
-            <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-blue-500/30 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-fadeIn">
+            <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               
-              <!-- Left Info -->
+              <!-- Info -->
               <div class="lg:col-span-6 space-y-4">
-                <div class="inline-block px-3 py-1 rounded-full text-xs font-extrabold border {{ role.badgeColor }}">
-                  RÔLE SYSTÈME : {{ role.code }}
+                <div class="inline-block px-3 py-1 rounded-full text-xs font-extrabold bg-ep-lightGreen text-ep-green border border-ep-green/30">
+                  CODE RÔLE : {{ role.code }}
                 </div>
-                <h3 class="text-2xl sm:text-3xl font-black text-white font-heading">{{ role.name }}</h3>
-                <p class="text-sm text-slate-300">
-                  <strong>Profil concerné :</strong> {{ role.targetUser }}
+                <h3 class="text-2xl sm:text-3xl font-black text-ep-navy font-heading">{{ role.name }}</h3>
+                <p class="text-sm text-slate-600 font-medium">
+                  <strong>Utilisateur :</strong> {{ role.targetUser }}
                 </p>
 
                 <div class="space-y-2 pt-2">
-                  <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Droits d'accès principaux :</span>
+                  <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Permissions principales :</span>
                   <div class="space-y-2">
                     @for (perm of role.permissions; track perm) {
-                      <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-200 bg-slate-950/60 p-2.5 rounded-xl border border-slate-800">
-                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                      <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 p-2.5 rounded-xl border border-slate-200 font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-ep-green"></span>
                         <span>{{ perm }}</span>
                       </div>
                     }
@@ -65,54 +65,54 @@ import { EduPulseStateService } from '../../services/edupulse-state.service';
                 </div>
               </div>
 
-              <!-- Right Mockup Preview -->
-              <div class="lg:col-span-6 p-6 rounded-2xl bg-slate-950 border border-slate-800 space-y-4">
-                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                  <div class="text-xs font-bold text-slate-400">Aperçu Vue {{ role.name }}</div>
-                  <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 text-[10px] font-mono">Authentifié JWT</span>
+              <!-- Preview -->
+              <div class="lg:col-span-6 p-6 rounded-2xl bg-ep-navy text-white space-y-4 shadow-md">
+                <div class="flex items-center justify-between border-b border-slate-700 pb-3">
+                  <div class="text-xs font-bold text-slate-300">Aperçu Interface {{ role.name }}</div>
+                  <span class="px-2 py-0.5 rounded bg-ep-green text-white text-[10px] font-bold">Sécurisé JWT</span>
                 </div>
 
-                <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-3">
+                <div class="p-4 rounded-xl bg-ep-navyDark border border-slate-700 space-y-3">
                   <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold text-white">Tableau de Bord {{ role.name }}</span>
-                    <span class="text-[10px] text-slate-400">Dernière synchro : En direct</span>
+                    <span class="text-xs font-bold text-white">Espace {{ role.name }}</span>
+                    <span class="text-[10px] text-ep-green font-bold">Actif</span>
                   </div>
 
                   @switch (role.code) {
                     @case ('SUPER_ADMIN') {
                       <div class="grid grid-cols-2 gap-2 text-xs">
-                        <div class="p-2.5 bg-slate-950 rounded border border-slate-800 text-purple-400 font-bold">48 Écoles Active Tenants</div>
-                        <div class="p-2.5 bg-slate-950 rounded border border-slate-800 text-emerald-400 font-bold">99.98% Uptime SaaS</div>
+                        <div class="p-2.5 bg-slate-900 rounded font-bold text-purple-300">48 Écoles Actives</div>
+                        <div class="p-2.5 bg-slate-900 rounded font-bold text-ep-green">99.99% Uptime</div>
                       </div>
                     }
                     @case ('SCHOOL_ADMIN') {
                       <div class="grid grid-cols-2 gap-2 text-xs">
-                        <div class="p-2.5 bg-slate-950 rounded border border-slate-800 text-blue-400 font-bold">1 240 Élèves Inscrits</div>
-                        <div class="p-2.5 bg-slate-950 rounded border border-slate-800 text-emerald-400 font-bold">36 Classes Configurées</div>
+                        <div class="p-2.5 bg-slate-900 rounded font-bold text-blue-300">1 240 Élèves</div>
+                        <div class="p-2.5 bg-slate-900 rounded font-bold text-ep-green">36 Classes</div>
                       </div>
                     }
                     @case ('ACCOUNTANT') {
                       <div class="grid grid-cols-2 gap-2 text-xs">
-                        <div class="p-2.5 bg-slate-950 rounded border border-slate-800 text-emerald-400 font-bold">88.4% Taux Recouvrement</div>
-                        <div class="p-2.5 bg-slate-950 rounded border border-slate-800 text-amber-400 font-bold">12.4M FCFA Encaissés</div>
+                        <div class="p-2.5 bg-slate-900 rounded font-bold text-ep-green">88.4% Recouvrement</div>
+                        <div class="p-2.5 bg-slate-900 rounded font-bold text-amber-300">12.4M FCFA Encaissés</div>
                       </div>
                     }
                     @case ('TEACHER') {
                       <div class="grid grid-cols-2 gap-2 text-xs">
-                        <div class="p-2.5 bg-slate-950 rounded border border-slate-800 text-emerald-400 font-bold">Mode Offline : Prêt</div>
-                        <div class="p-2.5 bg-slate-950 rounded border border-slate-800 text-blue-400 font-bold">6 Classes Saisies</div>
+                        <div class="p-2.5 bg-slate-900 rounded font-bold text-ep-green">Mode Offline Prêt</div>
+                        <div class="p-2.5 bg-slate-900 rounded font-bold text-blue-300">6 Classes Saisies</div>
                       </div>
                     }
                     @case ('PARENT') {
                       <div class="grid grid-cols-2 gap-2 text-xs">
-                        <div class="p-2.5 bg-slate-950 rounded border border-slate-800 text-emerald-400 font-bold">Moyenne : {{ state.activeChild().generalAverage }}/20</div>
-                        <div class="p-2.5 bg-slate-950 rounded border border-slate-800 text-cyan-400 font-bold">Rang : {{ state.activeChild().rank }}</div>
+                        <div class="p-2.5 bg-slate-900 rounded font-bold text-ep-green">Moyenne : {{ state.activeChild().generalAverage }}/20</div>
+                        <div class="p-2.5 bg-slate-900 rounded font-bold text-blue-300">Rang : {{ state.activeChild().rank }}</div>
                       </div>
                     }
                     @case ('STUDENT') {
                       <div class="grid grid-cols-2 gap-2 text-xs">
-                        <div class="p-2.5 bg-slate-950 rounded border border-slate-800 text-rose-400 font-bold">Devoir Math demain</div>
-                        <div class="p-2.5 bg-slate-950 rounded border border-slate-800 text-blue-400 font-bold">Emploi du Temps OK</div>
+                        <div class="p-2.5 bg-slate-900 rounded font-bold text-rose-300">Devoir Math demain</div>
+                        <div class="p-2.5 bg-slate-900 rounded font-bold text-blue-300">Planning OK</div>
                       </div>
                     }
                   }

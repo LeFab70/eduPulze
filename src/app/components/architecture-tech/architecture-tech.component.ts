@@ -6,78 +6,72 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section class="py-16 bg-slate-950 border-t border-slate-800">
-      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+    <section class="py-16 bg-white border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <span class="text-xs font-bold uppercase tracking-widest text-purple-400 bg-purple-950/60 px-3 py-1 rounded-full border border-purple-500/30">
-            Ingénierie & Robustesse Enterprise
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-2">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-ep-navy bg-slate-100 px-3 py-1 rounded-full border border-slate-300">
+            Ingénierie & Sécurité Enterprise
           </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">
+          <h2 class="text-3xl sm:text-4xl font-black text-ep-navy font-heading">
             Architecture Technique EduPulse
           </h2>
-          <p class="text-slate-400 text-sm sm:text-base">
-            Conçue selon les meilleures pratiques pour supporter des millions de requêtes et garantir une isolation stricte des données d'écoles.
+          <p class="text-slate-600 text-sm sm:text-base">
+            Conçue pour supporter des millions de requêtes et garantir l'isolation des données scolaires.
           </p>
         </div>
 
-        <!-- Tech Stack Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <!-- Stack 1: Backend -->
-          <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-4">
-            <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold">
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-xl">
               ☕
             </div>
-            <h3 class="text-lg font-bold text-white">Backend & Core API</h3>
-            <ul class="space-y-2 text-xs text-slate-300">
-              <li class="flex items-center gap-2">✔ Java 21 / Spring Boot 3.x</li>
-              <li class="flex items-center gap-2">✔ Spring Security & JWT</li>
-              <li class="flex items-center gap-2">✔ Controle d'accès RBAC</li>
-              <li class="flex items-center gap-2">✔ Flyway DB Migrations</li>
+            <h3 class="text-base font-bold text-ep-navy font-heading">Backend & Core API</h3>
+            <ul class="space-y-1.5 text-xs text-slate-600 font-semibold">
+              <li>✔ Java 21 / Spring Boot 3.x</li>
+              <li>✔ Spring Security & JWT</li>
+              <li>✔ Contrôle d'accès RBAC</li>
+              <li>✔ Flyway DB Migrations</li>
             </ul>
           </div>
 
-          <!-- Stack 2: Database -->
-          <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-4">
-            <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold">
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xl">
               🐘
             </div>
-            <h3 class="text-lg font-bold text-white">Base de Données</h3>
-            <ul class="space-y-2 text-xs text-slate-300">
-              <li class="flex items-center gap-2">✔ PostgreSQL Multi-Tenant</li>
-              <li class="flex items-center gap-2">✔ Isolation par tenant_id / Schema</li>
-              <li class="flex items-center gap-2">✔ High Availability & Indexing</li>
-              <li class="flex items-center gap-2">✔ Redis Cache & Sessions</li>
+            <h3 class="text-base font-bold text-ep-navy font-heading">Base de Données</h3>
+            <ul class="space-y-1.5 text-xs text-slate-600 font-semibold">
+              <li>✔ PostgreSQL Multi-Tenant</li>
+              <li>✔ Isolation par tenant_id / Schema</li>
+              <li>✔ High Availability & Indexing</li>
+              <li>✔ Redis Cache & Sessions</li>
             </ul>
           </div>
 
-          <!-- Stack 3: Clients Mobile & Web -->
-          <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-4">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-ep-green flex items-center justify-center font-bold text-xl">
               📱
             </div>
-            <h3 class="text-lg font-bold text-white">Applications Clients</h3>
-            <ul class="space-y-2 text-xs text-slate-300">
-              <li class="flex items-center gap-2">✔ Mobile: Flutter (iOS/Android)</li>
-              <li class="flex items-center gap-2">✔ Web: Angular 21 (Signals)</li>
-              <li class="flex items-center gap-2">✔ Offline First (SQLite/IndexedDB)</li>
-              <li class="flex items-center gap-2">✔ Sync automatique bidirectionnelle</li>
+            <h3 class="text-base font-bold text-ep-navy font-heading">Applications Clients</h3>
+            <ul class="space-y-1.5 text-xs text-slate-600 font-semibold">
+              <li>✔ Mobile: Flutter (iOS/Android)</li>
+              <li>✔ Web: Angular 21 (Signals)</li>
+              <li>✔ Offline First (SQLite/IndexedDB)</li>
+              <li>✔ Sync bidirectionnelle</li>
             </ul>
           </div>
 
-          <!-- Stack 4: Integrations Tierces -->
-          <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-4">
-            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xl">
               ⚡
             </div>
-            <h3 class="text-lg font-bold text-white">Intégrations Africaines</h3>
-            <ul class="space-y-2 text-xs text-slate-300">
-              <li class="flex items-center gap-2">✔ Maviance / TouchPay / Bizao</li>
-              <li class="flex items-center gap-2">✔ MTN MoMo & Orange Money</li>
-              <li class="flex items-center gap-2">✔ Firebase Push Notifications</li>
-              <li class="flex items-center gap-2">✔ Gateway SMS Local (SMS.cm/Twilio)</li>
+            <h3 class="text-base font-bold text-ep-navy font-heading">Intégrations Africaines</h3>
+            <ul class="space-y-1.5 text-xs text-slate-600 font-semibold">
+              <li>✔ Maviance / TouchPay / Bizao</li>
+              <li>✔ MTN MoMo & Orange Money</li>
+              <li>✔ Firebase Push Notifications</li>
+              <li>✔ Gateway SMS Local (SMS.cm)</li>
             </ul>
           </div>
 
