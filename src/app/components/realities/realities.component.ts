@@ -16,7 +16,7 @@ import { RevealDirective } from '../../directives/reveal.directive';
 
         <div class="rounded-3xl overflow-hidden mb-12 max-h-56 sm:max-h-64">
           <img
-            src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=1600&q=80"
+            src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1600&q=80"
             alt="Enseignant saisissant les notes sur une tablette"
             class="w-full h-56 sm:h-64 object-cover"
           />

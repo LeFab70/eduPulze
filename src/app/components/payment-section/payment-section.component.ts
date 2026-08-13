@@ -40,7 +40,7 @@ import { RevealDirective } from '../../directives/reveal.directive';
 
             <div class="relative rounded-2xl overflow-hidden h-44 sm:h-52">
               <img
-                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80"
+                src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&w=1200&q=80"
                 alt="Parent réglant la scolarité depuis son téléphone"
                 class="w-full h-full object-cover"
               />

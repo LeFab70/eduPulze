@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BackToTopComponent } from '../back-to-top/back-to-top.component';
 
 interface ChatMsg {
   from: 'bot' | 'user';
@@ -9,7 +10,7 @@ interface ChatMsg {
 @Component({
   selector: 'app-chatbot',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BackToTopComponent],
   template: `
     <div class="fixed bottom-5 right-5 z-[80] flex flex-col items-end gap-3">
       @if (open()) {
@@ -49,12 +50,15 @@ interface ChatMsg {
         </div>
       }
 
-      <button
-        (click)="open.set(!open())"
-        class="w-14 h-14 rounded-full bg-ep-green text-white shadow-lg shadow-ep-green/40 flex items-center justify-center hover:scale-105 transition-transform"
-        aria-label="Ouvrir le chat">
-        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 10h8M8 14h5M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.2-.92L3 20l1.08-3.24A7.5 7.5 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
-      </button>
+      <div class="flex items-center gap-3">
+        <app-back-to-top></app-back-to-top>
+        <button
+          (click)="open.set(!open())"
+          class="w-14 h-14 rounded-full bg-ep-green text-white shadow-lg shadow-ep-green/40 flex items-center justify-center hover:scale-105 transition-transform"
+          aria-label="Ouvrir le chat">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 10h8M8 14h5M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.2-.92L3 20l1.08-3.24A7.5 7.5 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        </button>
+      </div>
     </div>
   `
 })

@@ -17,15 +17,15 @@ import { BulletinGeneratorComponent } from '../simulators/bulletin-generator/bul
           <p class="text-slate-500">Parent, enseignant, caisse — ce que vous voyez sur le téléphone, sans simulation.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start" epReveal>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
           <!-- Parent phone -->
-          <div class="space-y-4">
+          <div class="space-y-4" epReveal="scale" [epDelay]="0">
             <div class="phone-frame-light">
               <div class="phone-notch-light"></div>
               <div class="pt-7 px-4 pb-2 bg-white">
                 <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Mes enfants</div>
                 <div class="mt-1 flex items-center gap-2">
-                  <img src="https://images.unsplash.com/photo-1595956553066-fe24a8c33395?w=80&h=80&fit=crop" alt="Kevin" class="w-8 h-8 rounded-full object-cover border-2 border-ep-green" />
+                  <img src="https://images.unsplash.com/photo-1539701938214-0d9736e1c16b?w=80&h=80&fit=crop" alt="Kevin" class="w-8 h-8 rounded-full object-cover border-2 border-ep-green" />
                   <div>
                     <div class="font-extrabold text-xs text-ep-navy">Kevin D.</div>
                     <div class="text-[10px] text-slate-500">Classe : 5ᵉ A</div>
@@ -51,6 +51,18 @@ import { BulletinGeneratorComponent } from '../simulators/bulletin-generator/bul
                     <div class="text-lg font-black text-ep-navy font-heading">5 / 32</div>
                   </div>
                 </div>
+                <div class="grid grid-cols-2 gap-2">
+                  <div class="p-2 rounded-xl bg-emerald-50 border border-emerald-100">
+                    <div class="text-[8px] font-extrabold text-emerald-700 uppercase">Groupe sci.</div>
+                    <div class="text-sm font-black text-ep-navy font-heading">15,00</div>
+                    <div class="text-[9px] font-bold text-emerald-700">Rang 4 / 32</div>
+                  </div>
+                  <div class="p-2 rounded-xl bg-blue-50 border border-blue-100">
+                    <div class="text-[8px] font-extrabold text-blue-700 uppercase">Groupe litt.</div>
+                    <div class="text-sm font-black text-ep-navy font-heading">13,88</div>
+                    <div class="text-[9px] font-bold text-blue-700">Rang 8 / 32</div>
+                  </div>
+                </div>
                 @for (g of parentGrades; track g.s) {
                   <div class="px-2 py-1.5 bg-slate-50 rounded-md flex justify-between text-[11px]">
                     <span class="font-bold text-slate-800">{{ g.s }}</span>
@@ -66,7 +78,7 @@ import { BulletinGeneratorComponent } from '../simulators/bulletin-generator/bul
           </div>
 
           <!-- Teacher phone -->
-          <div class="space-y-4">
+          <div class="space-y-4" epReveal="scale" [epDelay]="140">
             <div class="phone-frame-light">
               <div class="phone-notch-light"></div>
               <div class="pt-7 px-4 pb-3 bg-ep-navy text-white">
@@ -93,7 +105,7 @@ import { BulletinGeneratorComponent } from '../simulators/bulletin-generator/bul
           </div>
 
           <!-- Payment phone -->
-          <div class="space-y-4">
+          <div class="space-y-4" epReveal="scale" [epDelay]="280">
             <div class="phone-frame-light">
               <div class="phone-notch-light"></div>
               <div class="pt-7 px-4 pb-3 bg-white">
@@ -164,6 +176,50 @@ import { BulletinGeneratorComponent } from '../simulators/bulletin-generator/bul
               <text x="408" y="204" fill="#64748B" font-size="11">S5</text>
               <text x="520" y="204" fill="#64748B" font-size="11">S6</text>
             </svg>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch" epReveal="left">
+          <div class="lg:col-span-5 space-y-3">
+            <span class="text-xs font-bold uppercase tracking-widest text-ep-green bg-ep-lightGreen px-3 py-1 rounded-full">Reçu de caisse</span>
+            <h3 class="text-2xl sm:text-3xl font-black text-ep-navy font-heading">Ce que le parent reçoit</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Après chaque Mobile Money, le reçu montre le total déjà payé et le reste à régler. Plus d'erreur de caisse.</p>
+            <div class="relative rounded-2xl overflow-hidden h-40">
+              <img
+                src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&w=1000&q=80"
+                alt="Parent consultant son reçu de scolarité"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="max-w-md mx-auto bg-[#fffdf8] border border-amber-200 shadow-poster rounded-sm p-6 font-mono text-slate-800">
+              <div class="text-center border-b border-dashed border-slate-400 pb-3 mb-3">
+                <div class="text-[10px] uppercase tracking-widest text-slate-500">Collège Bilingue de l'Excellence</div>
+                <div class="text-sm font-black font-heading text-ep-navy mt-1">REÇU DE CAISSE</div>
+                <div class="text-[11px] font-bold">N° REC-EP-884211</div>
+              </div>
+              <div class="text-[11px] space-y-1 mb-3">
+                <div class="flex justify-between"><span>Élève</span><strong>Kevin D. · 5ᵉ A</strong></div>
+                <div class="flex justify-between"><span>Date</span><strong>13 août 2026</strong></div>
+                <div class="flex justify-between"><span>Mode</span><strong>MTN Mobile Money</strong></div>
+              </div>
+              <div class="text-[11px] space-y-1 border-y border-dashed border-slate-400 py-3">
+                <div class="flex justify-between"><span>Scolarité annuelle</span><span>200 000 F</span></div>
+                <div class="flex justify-between"><span>Tranche 1 (payée)</span><span>100 000 F</span></div>
+                <div class="flex justify-between"><span>Tranche 2 (ce reçu)</span><span>50 000 F</span></div>
+              </div>
+              <div class="text-[12px] space-y-1.5 pt-3">
+                <div class="flex justify-between font-black text-ep-green">
+                  <span>Total payé</span><span>150 000 FCFA</span>
+                </div>
+                <div class="flex justify-between font-black text-ep-navy">
+                  <span>Reste à payer</span><span>50 000 FCFA</span>
+                </div>
+              </div>
+              <p class="text-[9px] text-center text-slate-500 mt-4">Reçu généré automatiquement · EduPulse</p>
+            </div>
           </div>
         </div>
 

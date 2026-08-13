@@ -1,17 +1,18 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EduPulseStateService } from '../../services/edupulse-state.service';
+import { RevealDirective } from '../../directives/reveal.directive';
 
 @Component({
   selector: 'app-role-matrix',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RevealDirective],
   template: `
     <section class="py-16 bg-ep-lightBg border-t border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-12 space-y-2">
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-2" epReveal>
           <span class="text-xs font-extrabold uppercase tracking-widest text-ep-green bg-ep-lightGreen px-3 py-1 rounded-full">
             Un espace pour chacun
           </span>
@@ -40,7 +41,7 @@ import { EduPulseStateService } from '../../services/edupulse-state.service';
         <!-- Role Card -->
         @for (role of state.rolesList(); track role.code) {
           @if (state.activeRole() === role.code) {
-            <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" epReveal="scale">
               
               <!-- Info -->
               <div class="lg:col-span-6 space-y-4">

@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RevealDirective } from '../../directives/reveal.directive';
 
 @Component({
   selector: 'app-architecture-tech',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RevealDirective],
   template: `
     <section class="py-16 bg-white border-t border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-12 space-y-2">
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-2" epReveal>
           <span class="text-xs font-extrabold uppercase tracking-widest text-ep-navy bg-slate-100 px-3 py-1 rounded-full">
             Fiable, même quand le réseau lâche
           </span>
@@ -23,7 +24,7 @@ import { CommonModule } from '@angular/common';
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-3" epReveal="up" [epDelay]="0">
             <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-xl">
               ☕
             </div>
@@ -36,7 +37,7 @@ import { CommonModule } from '@angular/common';
             </ul>
           </div>
 
-          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-3" epReveal="up" [epDelay]="90">
             <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xl">
               🐘
             </div>
@@ -49,7 +50,7 @@ import { CommonModule } from '@angular/common';
             </ul>
           </div>
 
-          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-3" epReveal="up" [epDelay]="180">
             <div class="w-10 h-10 rounded-xl bg-emerald-100 text-ep-green flex items-center justify-center font-bold text-xl">
               📱
             </div>
@@ -62,7 +63,7 @@ import { CommonModule } from '@angular/common';
             </ul>
           </div>
 
-          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-3" epReveal="up" [epDelay]="270">
             <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xl">
               ⚡
             </div>

@@ -1,17 +1,18 @@
 import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EduPulseStateService } from '../../services/edupulse-state.service';
+import { RevealDirective } from '../../directives/reveal.directive';
 
 @Component({
   selector: 'app-pricing-calculator',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RevealDirective],
   template: `
     <section id="pricing" class="py-16 bg-ep-lightBg border-t border-slate-200">
       
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-12 space-y-2">
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-2" epReveal>
           <span class="text-xs font-extrabold uppercase tracking-widest text-ep-green bg-ep-lightGreen px-3 py-1 rounded-full">
             Pour les établissements
           </span>
@@ -38,7 +39,7 @@ import { EduPulseStateService } from '../../services/edupulse-state.service';
         </div>
 
         <!-- Slider Card -->
-        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl max-w-4xl mx-auto mb-12 space-y-6">
+        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl max-w-4xl mx-auto mb-12 space-y-6" epReveal="up" [epDelay]="80">
           <div class="flex flex-wrap items-center justify-between gap-4">
             <div>
               <label class="text-xs font-bold uppercase text-slate-500">Nombre d'élèves de l'école</label>
@@ -73,7 +74,7 @@ import { EduPulseStateService } from '../../services/edupulse-state.service';
         </div>
 
         <!-- 3 Offer Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" epReveal="scale" [epDelay]="160">
           
           <!-- Starter -->
           <div class="bg-white p-6 rounded-3xl border border-slate-200 space-y-4 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">

@@ -1,17 +1,18 @@
 import { Component, inject, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EduPulseStateService } from '../../services/edupulse-state.service';
+import { RevealDirective } from '../../directives/reveal.directive';
 
 @Component({
   selector: 'app-modules-explorer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RevealDirective],
   template: `
     <section id="modules" class="py-16 bg-white border-t border-slate-200">
       
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-12 space-y-2">
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-2" epReveal>
           <span class="text-xs font-extrabold uppercase tracking-widest text-ep-green bg-ep-lightGreen px-3 py-1 rounded-full">
             Tout ce dont l'école a besoin
           </span>
@@ -63,8 +64,8 @@ import { EduPulseStateService } from '../../services/edupulse-state.service';
 
         <!-- Modules Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          @for (mod of filteredModules(); track mod.id) {
-            <div class="module-card bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-4 hover:border-ep-green hover:shadow-lift transition-all flex flex-col justify-between">
+          @for (mod of filteredModules(); track mod.id; let i = $index) {
+            <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-4 hover:border-ep-green hover:shadow-lift transition-all flex flex-col justify-between" epReveal="up" [epDelay]="(i % 3) * 90">
               
               <div>
                 <div class="flex items-center justify-between mb-3">

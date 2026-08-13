@@ -9,6 +9,7 @@ export interface GradeItem {
   coefficient: number;
   teacher: string;
   date: string;
+  group: 'scientifique' | 'litteraire';
 }
 
 export interface Child {
@@ -59,7 +60,7 @@ export class EduPulseStateService {
       name: 'Kevin D.',
       class: '5ᵉ A',
       matricule: '24EP-084',
-      photoUrl: 'https://images.unsplash.com/photo-1595956553066-fe24a8c33395?w=150&h=150&fit=crop&q=80',
+      photoUrl: 'https://images.unsplash.com/photo-1539701938214-0d9736e1c16b?w=150&h=150&fit=crop&q=80',
       generalAverage: 14.25,
       rank: '5 / 32',
       totalStudents: 32,
@@ -70,12 +71,12 @@ export class EduPulseStateService {
       nextDueDate: '15 Novembre 2026',
       nextDueAmount: 50000,
       grades: [
-        { subject: 'Mathématiques', score: 16, maxScore: 20, classMin: 6, classMax: 19, coefficient: 4, teacher: 'M. Ndongo', date: '10 Oct' },
-        { subject: 'Français', score: 14, maxScore: 20, classMin: 7, classMax: 18, coefficient: 3, teacher: 'Mme Kamga', date: '08 Oct' },
-        { subject: 'Anglais', score: 13, maxScore: 20, classMin: 5, classMax: 17, coefficient: 3, teacher: 'Mr. John B.', date: '12 Oct' },
-        { subject: 'Histoire - Géo', score: 15, maxScore: 20, classMin: 8, classMax: 18, coefficient: 2, teacher: 'M. Etoa', date: '05 Oct' },
-        { subject: 'Physique - Chimie', score: 14.5, maxScore: 20, classMin: 6, classMax: 17, coefficient: 2, teacher: 'Mme Tchakounte', date: '11 Oct' },
-        { subject: 'SVT', score: 13.5, maxScore: 20, classMin: 7, classMax: 16, coefficient: 2, teacher: 'M. Abena', date: '09 Oct' }
+        { subject: 'Mathématiques', score: 16, maxScore: 20, classMin: 6, classMax: 19, coefficient: 4, teacher: 'M. Ndongo', date: '10 Oct', group: 'scientifique' },
+        { subject: 'Physique - Chimie', score: 14.5, maxScore: 20, classMin: 6, classMax: 17, coefficient: 2, teacher: 'Mme Tchakounte', date: '11 Oct', group: 'scientifique' },
+        { subject: 'SVT', score: 13.5, maxScore: 20, classMin: 7, classMax: 16, coefficient: 2, teacher: 'M. Abena', date: '09 Oct', group: 'scientifique' },
+        { subject: 'Français', score: 14, maxScore: 20, classMin: 7, classMax: 18, coefficient: 3, teacher: 'Mme Kamga', date: '08 Oct', group: 'litteraire' },
+        { subject: 'Anglais', score: 13, maxScore: 20, classMin: 5, classMax: 17, coefficient: 3, teacher: 'Mr. John B.', date: '12 Oct', group: 'litteraire' },
+        { subject: 'Histoire - Géo', score: 15, maxScore: 20, classMin: 8, classMax: 18, coefficient: 2, teacher: 'M. Etoa', date: '05 Oct', group: 'litteraire' }
       ]
     },
     {
@@ -83,7 +84,7 @@ export class EduPulseStateService {
       name: 'Sarah M.',
       class: '3ᵉ C (Sous-système Francophone)',
       matricule: '22EP-119',
-      photoUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
+      photoUrl: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=150&h=150&fit=crop&q=80',
       generalAverage: 16.80,
       rank: '1 / 38',
       totalStudents: 38,
@@ -94,11 +95,11 @@ export class EduPulseStateService {
       nextDueDate: 'Soldé',
       nextDueAmount: 0,
       grades: [
-        { subject: 'Mathématiques', score: 19, maxScore: 20, classMin: 8, classMax: 19, coefficient: 5, teacher: 'M. Bikoue', date: '12 Oct' },
-        { subject: 'Français', score: 16, maxScore: 20, classMin: 9, classMax: 18, coefficient: 4, teacher: 'Mme Fotso', date: '11 Oct' },
-        { subject: 'Anglais', score: 17, maxScore: 20, classMin: 7, classMax: 18, coefficient: 3, teacher: 'Mrs. Enow', date: '10 Oct' },
-        { subject: 'Histoire - Géo', score: 15.5, maxScore: 20, classMin: 8, classMax: 17, coefficient: 2, teacher: 'M. Mbida', date: '09 Oct' },
-        { subject: 'Informatique & Algorithmique', score: 18.5, maxScore: 20, classMin: 10, classMax: 19, coefficient: 2, teacher: 'M. Kouam', date: '13 Oct' }
+        { subject: 'Mathématiques', score: 19, maxScore: 20, classMin: 8, classMax: 19, coefficient: 5, teacher: 'M. Bikoue', date: '12 Oct', group: 'scientifique' },
+        { subject: 'Informatique & Algorithmique', score: 18.5, maxScore: 20, classMin: 10, classMax: 19, coefficient: 2, teacher: 'M. Kouam', date: '13 Oct', group: 'scientifique' },
+        { subject: 'Français', score: 16, maxScore: 20, classMin: 9, classMax: 18, coefficient: 4, teacher: 'Mme Fotso', date: '11 Oct', group: 'litteraire' },
+        { subject: 'Anglais', score: 17, maxScore: 20, classMin: 7, classMax: 18, coefficient: 3, teacher: 'Mrs. Enow', date: '10 Oct', group: 'litteraire' },
+        { subject: 'Histoire - Géo', score: 15.5, maxScore: 20, classMin: 8, classMax: 17, coefficient: 2, teacher: 'M. Mbida', date: '09 Oct', group: 'litteraire' }
       ]
     }
   ]);

@@ -1,31 +1,30 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LogoComponent } from '../logo/logo.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, LogoComponent],
   template: `
     <header class="bg-white/90 backdrop-blur-xl border-b border-slate-100 sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[84px]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[84px] gap-3">
 
-        <a href="#hero" class="flex items-center gap-3 group">
-          <div class="w-12 h-12 rounded-full bg-ep-navy flex items-center justify-center shadow-lift group-hover:scale-105 transition-transform">
-            <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M3 9.5L12 5l9 4.5-9 4.5L3 9.5z" fill="currentColor"/>
-              <path d="M7 12.2v4.1c0 .3 2.2 2.2 5 2.2s5-1.9 5-2.2v-4.1" stroke="#00A651" stroke-width="1.6" stroke-linecap="round"/>
-              <path d="M21 10v5" stroke="#00A651" stroke-width="1.6" stroke-linecap="round"/>
+        <div class="flex items-center gap-2 sm:gap-3 min-w-0">
+          <button
+            type="button"
+            (click)="toTop()"
+            class="w-10 h-10 rounded-full border border-slate-200 bg-white text-ep-navy flex items-center justify-center shrink-0 hover:bg-ep-lightGreen hover:border-ep-green hover:text-ep-green transition-all"
+            aria-label="Retour en haut"
+            title="Retour en haut">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M5 15l7-7 7 7"/>
             </svg>
-          </div>
-          <div>
-            <div class="text-[26px] leading-none font-black tracking-tight text-ep-navy font-heading">
-              Edu<span class="text-ep-green">Pulse</span>
-            </div>
-            <p class="text-[10px] sm:text-[11px] text-slate-500 font-semibold leading-tight mt-1">
-              La gestion scolaire, simple et intelligente.
-            </p>
-          </div>
-        </a>
+          </button>
+          <a href="#hero" class="min-w-0">
+            <app-logo [size]="48" [showTagline]="true"></app-logo>
+          </a>
+        </div>
 
         <nav class="hidden lg:flex items-center gap-7 text-[13px] font-bold text-ep-navy/80">
           <a href="#hero" class="hover:text-ep-green transition-colors">Accueil</a>
@@ -37,7 +36,7 @@ import { CommonModule } from '@angular/common';
         </nav>
 
         <div class="flex items-center gap-3">
-          <div class="shield-badge-poster hidden sm:flex items-center gap-2.5">
+          <div class="shield-badge-poster hidden md:flex items-center gap-2.5">
             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
             </svg>
@@ -54,4 +53,8 @@ import { CommonModule } from '@angular/common';
     </header>
   `
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  toTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}

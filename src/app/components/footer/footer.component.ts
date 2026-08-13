@@ -1,20 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RevealDirective } from '../../directives/reveal.directive';
+import { LogoComponent } from '../logo/logo.component';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, RevealDirective],
+  imports: [CommonModule, RevealDirective, LogoComponent],
   template: `
     <footer id="download" class="bg-ep-navy text-white pt-16 pb-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
         <div class="flex flex-col lg:flex-row items-center justify-between gap-10" epReveal>
           <div class="flex items-center gap-4 text-center lg:text-left">
-            <div class="w-14 h-14 rounded-2xl bg-ep-green text-white flex items-center justify-center shrink-0">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 14v7"/></svg>
-            </div>
+            <app-logo [size]="56" [showWordmark]="false" variant="dark"></app-logo>
             <p class="text-xl sm:text-2xl font-black font-heading leading-snug">
               EduPulse, ensemble pour l'avenir de nos enfants.
             </p>
