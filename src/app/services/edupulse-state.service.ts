@@ -60,7 +60,7 @@ export class EduPulseStateService {
       name: 'Andy Kouonang',
       class: '5ᵉ A',
       matricule: '24EP-084',
-      photoUrl: 'https://images.unsplash.com/photo-1539701938214-0d9736e1c16b?w=240&h=240&fit=crop&crop=faces&q=85',
+      photoUrl: '/assets/andy-kouonang.jpg',
       generalAverage: 14.25,
       rank: '5 / 32',
       totalStudents: 32,

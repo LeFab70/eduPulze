@@ -25,7 +25,7 @@ import { BulletinGeneratorComponent } from '../simulators/bulletin-generator/bul
               <div class="pt-7 px-4 pb-2 bg-white">
                 <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Mes enfants</div>
                 <div class="mt-1 flex items-center gap-2">
-                  <img src="https://images.unsplash.com/photo-1539701938214-0d9736e1c16b?w=80&h=80&fit=crop" alt="Andy Kouonang" class="w-8 h-8 rounded-full object-cover border-2 border-ep-green" />
+                  <img src="/assets/andy-kouonang.jpg" alt="Andy Kouonang" class="w-8 h-8 rounded-full object-cover border-2 border-ep-green" />
                   <div>
                     <div class="font-extrabold text-xs text-ep-navy">Andy Kouonang</div>
                     <div class="text-[10px] text-slate-500">Classe : 5ᵉ A</div>

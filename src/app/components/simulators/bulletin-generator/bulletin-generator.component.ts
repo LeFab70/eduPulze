@@ -71,7 +71,7 @@ interface SubjectGroup {
           <img
             [src]="state.activeChild().photoUrl"
             [alt]="state.activeChild().name"
-            class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-[center_18%] border-[3px] border-slate-900 shadow-md shrink-0 order-1 sm:order-2 mx-auto bg-slate-200"
+            class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-center border-[3px] border-slate-900 shadow-md shrink-0 order-1 sm:order-2 mx-auto bg-slate-200"
           />
 
           <div class="text-left sm:text-right space-y-0.5 min-w-0 w-full sm:w-auto order-3">
