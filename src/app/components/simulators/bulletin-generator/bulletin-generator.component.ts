@@ -61,13 +61,20 @@ interface SubjectGroup {
           </div>
         </div>
 
-        <div class="flex flex-wrap items-center justify-between p-3 rounded-lg bg-slate-100 border border-slate-300 text-xs">
-          <div class="space-y-0.5">
+        <div class="flex flex-col sm:grid sm:grid-cols-[1fr_auto_1fr] items-center gap-3 p-3 rounded-lg bg-slate-100 border border-slate-300 text-xs">
+          <div class="space-y-0.5 min-w-0 w-full sm:w-auto order-2 sm:order-1">
             <div class="font-black text-slate-900 text-sm">BULLETIN DE NOTES — TRIMESTRE 1</div>
             <div>Élève : <strong class="text-slate-900 font-extrabold uppercase">{{ state.activeChild().name }}</strong></div>
             <div>Matricule : <span class="font-mono text-slate-700">{{ state.activeChild().matricule }}</span> | Classe : <strong class="text-slate-900">{{ state.activeChild().class }}</strong></div>
           </div>
-          <div class="text-right space-y-0.5 border-l border-slate-300 pl-4">
+
+          <img
+            [src]="state.activeChild().photoUrl"
+            [alt]="state.activeChild().name"
+            class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-[center_18%] border-[3px] border-slate-900 shadow-md shrink-0 order-1 sm:order-2 mx-auto bg-slate-200"
+          />
+
+          <div class="text-left sm:text-right space-y-0.5 min-w-0 w-full sm:w-auto order-3">
             <div>Année Scolaire : <strong>2026 - 2027</strong></div>
             <div>Effectif Classe : <strong>{{ state.activeChild().totalStudents }} élèves</strong></div>
             <div>Rang de l'Élève : <strong class="text-emerald-700 text-sm">{{ state.activeChild().rank }}</strong></div>

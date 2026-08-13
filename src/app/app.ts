@@ -13,6 +13,7 @@ import { RealitiesComponent } from './components/realities/realities.component';
 import { StatsBarComponent } from './components/stats-bar/stats-bar.component';
 import { DemoGalleryComponent } from './components/demo-gallery/demo-gallery.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
+import { WhatsappFloatComponent } from './components/whatsapp-float/whatsapp-float.component';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +33,7 @@ import { ChatbotComponent } from './components/chatbot/chatbot.component';
     ArchitectureTechComponent,
     FooterComponent,
     ChatbotComponent,
+    WhatsappFloatComponent,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
