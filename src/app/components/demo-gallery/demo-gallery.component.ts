@@ -25,9 +25,9 @@ import { BulletinGeneratorComponent } from '../simulators/bulletin-generator/bul
               <div class="pt-7 px-4 pb-2 bg-white">
                 <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Mes enfants</div>
                 <div class="mt-1 flex items-center gap-2">
-                  <img src="https://images.unsplash.com/photo-1539701938214-0d9736e1c16b?w=80&h=80&fit=crop" alt="Kevin" class="w-8 h-8 rounded-full object-cover border-2 border-ep-green" />
+                  <img src="https://images.unsplash.com/photo-1539701938214-0d9736e1c16b?w=80&h=80&fit=crop" alt="Andy Kouonang" class="w-8 h-8 rounded-full object-cover border-2 border-ep-green" />
                   <div>
-                    <div class="font-extrabold text-xs text-ep-navy">Kevin D.</div>
+                    <div class="font-extrabold text-xs text-ep-navy">Andy Kouonang</div>
                     <div class="text-[10px] text-slate-500">Classe : 5ᵉ A</div>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ import { BulletinGeneratorComponent } from '../simulators/bulletin-generator/bul
               <div class="phone-notch-light"></div>
               <div class="pt-7 px-4 pb-3 bg-white">
                 <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Scolarité</div>
-                <div class="font-extrabold text-sm text-ep-navy">Kevin D. · 5ᵉ A</div>
+                <div class="font-extrabold text-sm text-ep-navy">Andy Kouonang · 5ᵉ A</div>
               </div>
               <div class="px-3.5 pb-4 space-y-3 min-h-[340px] bg-white">
                 <div class="p-3 rounded-xl bg-slate-50">
@@ -201,7 +201,7 @@ import { BulletinGeneratorComponent } from '../simulators/bulletin-generator/bul
                 <div class="text-[11px] font-bold">N° REC-EP-884211</div>
               </div>
               <div class="text-[11px] space-y-1 mb-3">
-                <div class="flex justify-between"><span>Élève</span><strong>Kevin D. · 5ᵉ A</strong></div>
+                <div class="flex justify-between"><span>Élève</span><strong>Andy Kouonang · 5ᵉ A</strong></div>
                 <div class="flex justify-between"><span>Date</span><strong>13 août 2026</strong></div>
                 <div class="flex justify-between"><span>Mode</span><strong>MTN Mobile Money</strong></div>
               </div>
@@ -237,10 +237,10 @@ export class DemoGalleryComponent {
   ];
 
   teacherRows = [
-    { name: 'Kevin D.', mat: '24EP-084', note: 16 },
-    { name: 'Amina T.', mat: '24EP-091', note: 13 },
-    { name: 'Brice N.', mat: '24EP-077', note: 11 },
-    { name: 'Sarah M.', mat: '24EP-102', note: 18 },
-    { name: 'Joel K.', mat: '24EP-088', note: 14 },
+    { name: 'Brigitte W.', mat: '24EP-091', note: 13 },
+    { name: 'Mauryn K.', mat: '24EP-077', note: 11 },
+    { name: 'Gisele Ymele', mat: '24EP-102', note: 18 },
+    { name: 'Mbi Theresse', mat: '24EP-088', note: 14 },
+    { name: 'Regina F.', mat: '24EP-084', note: 16 },
   ];
 }

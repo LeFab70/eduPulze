@@ -10,8 +10,11 @@ import { RevealDirective } from '../../directives/reveal.directive';
     <section class="py-16 bg-white border-t border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-12 space-y-2" epReveal>
-          <span class="text-xs font-extrabold uppercase tracking-widest text-ep-navy bg-slate-100 px-3 py-1 rounded-full">
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-3" epReveal>
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-slate-100 text-ep-navy flex items-center justify-center">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+          </div>
+          <span class="inline-block text-xs font-extrabold uppercase tracking-widest text-ep-navy bg-slate-100 px-3 py-1 rounded-full">
             Fiable, même quand le réseau lâche
           </span>
           <h2 class="text-3xl sm:text-4xl font-black text-ep-navy font-heading">

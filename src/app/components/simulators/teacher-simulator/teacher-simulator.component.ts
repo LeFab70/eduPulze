@@ -42,7 +42,7 @@ import { EduPulseStateService } from '../../../services/edupulse-state.service';
             [value]="selectedStudent()"
             (change)="selectedStudent.set($any($event.target).value)"
             class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 font-bold focus:border-ep-green focus:outline-none">
-            <option value="Kevin D.">Kevin D. (5ᵉ A)</option>
+            <option value="Andy Kouonang">Andy Kouonang (5ᵉ A)</option>
             <option value="Sarah M.">Sarah M. (3ᵉ C)</option>
             <option value="Brice N.">Brice N. (6ᵉ B)</option>
           </select>
@@ -116,7 +116,7 @@ import { EduPulseStateService } from '../../../services/edupulse-state.service';
 export class TeacherSimulatorComponent {
   state = inject(EduPulseStateService);
 
-  selectedStudent = signal<string>('Kevin D.');
+  selectedStudent = signal<string>('Andy Kouonang');
   subjectInput = signal<string>('Informatique & Algorithmique');
   scoreInput = signal<number>(17);
   aiSuggestion = signal<string>('');

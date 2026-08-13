@@ -54,9 +54,9 @@ import { RevealDirective } from '../../directives/reveal.directive';
                   <div class="h-3 bg-slate-950 mx-auto w-16 rounded-b-lg"></div>
                   <div class="px-2.5 pt-1.5 pb-2 space-y-1.5">
                     <div class="flex items-center gap-1.5">
-                      <img src="https://images.unsplash.com/photo-1539701938214-0d9736e1c16b?w=64&h=64&fit=crop" alt="Kevin D." class="w-6 h-6 rounded-full object-cover border border-ep-green" />
+                      <img src="https://images.unsplash.com/photo-1539701938214-0d9736e1c16b?w=64&h=64&fit=crop" alt="Andy Kouonang" class="w-6 h-6 rounded-full object-cover border border-ep-green" />
                       <div>
-                        <div class="text-[10px] font-black text-ep-navy leading-none">Kevin D.</div>
+                        <div class="text-[10px] font-black text-ep-navy leading-none">Andy Kouonang</div>
                         <div class="text-[8px] text-slate-500">Classe : 5ᵉ A</div>
                       </div>
                     </div>

@@ -56,8 +56,8 @@ export class EduPulseStateService {
   // 1. Mobile App - Children Signals
   readonly children = signal<Child[]>([
     {
-      id: 'kevin',
-      name: 'Kevin D.',
+      id: 'andy',
+      name: 'Andy Kouonang',
       class: '5ᵉ A',
       matricule: '24EP-084',
       photoUrl: 'https://images.unsplash.com/photo-1539701938214-0d9736e1c16b?w=150&h=150&fit=crop&q=80',
@@ -104,7 +104,7 @@ export class EduPulseStateService {
     }
   ]);
 
-  readonly selectedChildId = signal<string>('kevin');
+  readonly selectedChildId = signal<string>('andy');
 
   readonly activeChild = computed(() => {
     return this.children().find(c => c.id === this.selectedChildId()) || this.children()[0];

@@ -26,8 +26,11 @@ interface Plan {
     <section id="pricing" class="py-16 bg-ep-lightBg border-t border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div class="text-center max-w-3xl mx-auto mb-12 space-y-2" epReveal>
-          <span class="text-xs font-extrabold uppercase tracking-widest text-ep-green bg-ep-lightGreen px-3 py-1 rounded-full">
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-3" epReveal>
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-ep-lightGreen text-ep-green flex items-center justify-center">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </div>
+          <span class="inline-block text-xs font-extrabold uppercase tracking-widest text-ep-green bg-ep-lightGreen px-3 py-1 rounded-full">
             Pour les établissements
           </span>
           <h2 class="text-3xl sm:text-4xl font-black text-ep-navy font-heading">
