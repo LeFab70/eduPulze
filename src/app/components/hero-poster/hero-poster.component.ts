@@ -15,25 +15,26 @@ import { RevealDirective } from '../../directives/reveal.directive';
 
           <div class="lg:col-span-5 space-y-5 text-left" epReveal="left">
             <h1 class="text-[30px] sm:text-5xl xl:text-[52px] font-black text-ep-navy tracking-tight leading-[1.06] font-heading uppercase">
-              Payer de chez vous sans plus faire
-              <span class="text-ep-green"> le rang à l'école</span>
+              La gestion scolaire,
+              <span class="text-ep-green"> simple et connectée</span>
             </h1>
 
             <p class="text-ep-navy font-extrabold text-[15px] sm:text-xl leading-snug uppercase tracking-wide font-heading">
-              Payez à votre rythme, suivez la scolarité de votre enfant en temps réel.
+              Notes, absences, bulletins, paiements et communication — toute l'école, au même endroit.
             </p>
 
             <p class="text-slate-600 text-[15px] sm:text-[17px] leading-relaxed max-w-xl">
-              <strong class="text-ep-navy font-semibold">EduPulse</strong> est la solution complète pour une école connectée, des parents rassurés et des élèves qui réussissent. Notes, absences, bulletins et scolarité — tout est dans votre poche.
+              <strong class="text-ep-navy font-semibold">EduPulse</strong> connecte l'école, les enseignants et les parents dans une seule application : suivi pédagogique en temps réel, vie scolaire, paiement de la scolarité et communication, pensée pour l'Afrique.
             </p>
 
             <div class="flex flex-wrap items-center gap-3 pt-1">
-              <a href="#payment-sim" class="px-5 py-3.5 rounded-xl bg-ep-green hover:bg-ep-greenHover text-white font-extrabold text-sm shadow-lg shadow-ep-green/30 flex items-center gap-2 transition-all hover:-translate-y-0.5">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                Payer par Mobile Money
+              <a href="#demo" class="px-5 py-3.5 rounded-xl bg-ep-green hover:bg-ep-greenHover text-white font-extrabold text-sm shadow-lg shadow-ep-green/30 flex items-center gap-2 transition-all hover:-translate-y-0.5">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"></path></svg>
+                Découvrir l'application
               </a>
-              <a href="#demo" class="px-5 py-3.5 rounded-xl bg-ep-navy hover:bg-ep-navyDark text-white font-bold text-sm shadow-md">
-                Voir l'application
+              <a href="#payment-sim" class="px-5 py-3.5 rounded-xl bg-ep-navy hover:bg-ep-navyDark text-white font-bold text-sm shadow-md flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Payer la scolarité
               </a>
             </div>
           </div>
