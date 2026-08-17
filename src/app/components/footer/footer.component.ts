@@ -20,23 +20,24 @@ import { LogoComponent } from '../logo/logo.component';
           </div>
 
           <div class="text-center space-y-3">
-            <p class="text-[11px] font-black uppercase tracking-[0.2em] text-emerald-300">Téléchargez EduPulse</p>
+            <p class="text-[11px] font-black uppercase tracking-[0.2em] text-emerald-300">Application mobile bientôt disponible</p>
             <div class="flex flex-wrap items-center justify-center gap-3">
-              <a href="#hero" class="h-12 px-4 bg-black text-white rounded-xl flex items-center gap-3 hover:bg-slate-900">
+              <a href="https://wa.me/14389855417?text=Bonjour%20EduPulse%2C%20je%20souhaite%20%C3%AAtre%20averti%20du%20lancement%20de%20l%27application%20Android." target="_blank" rel="noopener" class="h-12 px-4 bg-black text-white rounded-xl flex items-center gap-3 hover:bg-slate-900">
                 <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.4c-.3.3-.5.8-.5 1.4v16.4c0 .6.2 1.1.5 1.4l.1.1 9.1-9.1v-.2L3.7 2.3l-.1.1zm12.2 8.7-2.1 2.1 2.5 2.5 2.6-1.5c.7-.4.7-1.1 0-1.5l-3-1.6zm-3.2 3.2-9 9c.3.1.6.1.9.1.5 0 1-.1 1.5-.4l10.2-5.8-3.6-2.9zm3.1-8.3L12.5 11l2.1 2.1 3.6-2.1-2.5-2.7z"/></svg>
                 <div class="text-left leading-none">
-                  <span class="text-[9px] uppercase tracking-wider text-slate-300 block">Disponible sur</span>
+                  <span class="text-[9px] uppercase tracking-wider text-slate-300 block">Bientôt sur</span>
                   <span class="text-sm font-extrabold font-heading">Google Play</span>
                 </div>
               </a>
-              <a href="#hero" class="h-12 px-4 bg-black text-white rounded-xl flex items-center gap-3 hover:bg-slate-900">
+              <a href="https://wa.me/14389855417?text=Bonjour%20EduPulse%2C%20je%20souhaite%20%C3%AAtre%20averti%20du%20lancement%20de%20l%27application%20iOS." target="_blank" rel="noopener" class="h-12 px-4 bg-black text-white rounded-xl flex items-center gap-3 hover:bg-slate-900">
                 <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.7c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.9-3.5.9s-1.8-.8-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.3 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7 2-1.1 2.8-2.2c.9-1.3 1.3-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.9zM14.7 6.3c.6-.8 1.1-1.9.9-3-1 .1-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.2-.5 2.9-1.4z"/></svg>
                 <div class="text-left leading-none">
-                  <span class="text-[9px] uppercase tracking-wider text-slate-300 block">Télécharger dans</span>
+                  <span class="text-[9px] uppercase tracking-wider text-slate-300 block">Bientôt sur</span>
                   <span class="text-sm font-extrabold font-heading">l'App Store</span>
                 </div>
               </a>
             </div>
+            <p class="text-[11px] text-slate-400 max-w-[220px] mx-auto leading-relaxed">Écrivez-nous sur WhatsApp pour être averti dès la sortie, ou testez la démo web dès maintenant.</p>
           </div>
         </div>
 

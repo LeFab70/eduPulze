@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
       href="https://wa.me/14389855417?text=Bonjour%20EduPulse"
       target="_blank"
       rel="noopener"
-      class="wa-float fixed left-4 sm:left-5 top-1/2 -translate-y-1/2 z-[90] flex items-center gap-2 pl-2 pr-3 sm:pr-4 h-14 rounded-full bg-[#25D366] text-white"
+      class="wa-float fixed left-4 sm:left-5 bottom-5 z-[90] flex items-center gap-2 pl-2 pr-3 sm:pr-4 h-14 rounded-full bg-[#25D366] text-white"
       aria-label="Contacter EduPulse sur WhatsApp"
       title="WhatsApp EduPulse">
       <span class="wa-float-icon w-10 h-10 rounded-full bg-white/25 flex items-center justify-center shrink-0 relative z-[1]">

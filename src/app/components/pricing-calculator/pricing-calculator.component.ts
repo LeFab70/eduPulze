@@ -118,7 +118,7 @@ interface Plan {
               tabindex="0"
               (click)="selectPlan(plan.key)"
               (keydown.enter)="selectPlan(plan.key)"
-              class="bg-white p-6 rounded-3xl space-y-4 flex flex-col justify-between cursor-pointer transition-all relative outline-none"
+              class="bg-white p-6 rounded-3xl space-y-4 flex flex-col justify-between cursor-pointer transition-all relative outline-none focus-visible:ring-4 focus-visible:ring-ep-green/35"
               [class.border-2]="selectedPlan() === plan.key"
               [class.border-ep-green]="selectedPlan() === plan.key"
               [class.shadow-xl]="selectedPlan() === plan.key"

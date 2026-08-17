@@ -14,7 +14,7 @@ import { BulletinGeneratorComponent } from '../simulators/bulletin-generator/bul
         <div class="text-center max-w-3xl mx-auto space-y-3" epReveal>
           <span class="text-xs font-bold uppercase tracking-widest text-ep-green bg-ep-lightGreen px-3 py-1 rounded-full">L'application en images</span>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-ep-navy font-heading">Toute l'école, sur le téléphone</h2>
-          <p class="text-slate-500">Parent, enseignant, caisse, direction — notes, absences, conseil de classe et alertes. Sans simulation.</p>
+          <p class="text-slate-500">Parent, enseignant, caisse, direction — notes, absences, conseil de classe et alertes. Aperçu fidèle de l'application, avec des données de démonstration.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10 items-start">

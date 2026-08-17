@@ -20,7 +20,7 @@ import { RevealDirective } from '../../directives/reveal.directive';
             </h1>
 
             <p class="text-ep-navy font-extrabold text-[15px] sm:text-xl leading-snug uppercase tracking-wide font-heading">
-              Payez à votre rythme, suivez le rythme de votre enfant en tout temps.
+              Payez à votre rythme, suivez la scolarité de votre enfant en temps réel.
             </p>
 
             <p class="text-slate-600 text-[15px] sm:text-[17px] leading-relaxed max-w-xl">

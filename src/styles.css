@@ -17,6 +17,16 @@ html, body {
   overflow-x: clip;
 }
 
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2.5px solid var(--ep-green);
+  outline-offset: 2px;
+}
+
 body {
   background-color: #FFFFFF;
   color: #1E293B;
@@ -179,7 +189,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .wa-float:hover {
   animation-play-state: paused;
-  transform: translateY(-50%) scale(1.06);
+  transform: scale(1.06);
 }
 
 @keyframes waPulse {
@@ -195,10 +205,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes waBob {
   0%, 100% {
-    transform: translateY(-50%) translateX(0);
+    transform: translateX(0);
   }
   50% {
-    transform: translateY(calc(-50% - 8px)) translateX(2px);
+    transform: translateY(-8px) translateX(2px);
   }
 }
 
